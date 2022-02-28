@@ -11,13 +11,15 @@
 {% block main %}
      <div class="row_flex">
         <div class="frofile_contain">
-            <div id="frofile"></div>
+            <div id="frofile">
+                <img id="frofile_img" src=../media/{{image}}>
+            </div>
             <div id="id_contain">
                 {{ request.user }}
             </div>
             <div id="edit_profile" >
-                <a>
-                    Edit Profile
+                <a  id ="href" href="/mypage">
+                    Edit
                 </a>
 
             </div>

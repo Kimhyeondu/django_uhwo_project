@@ -4,6 +4,9 @@ from article.models import post
 
 
 # Create your views here.
+from user.models import UserModel
+
+
 def mypage(request):
     username = request
     like=post.objects.filter(like =request.user)
@@ -19,6 +22,7 @@ def mypage(request):
         print("----------")
         # print(ff)
         print(td)
+    userprofile = UserModel.objects.get(username=request.user).fro_image
 
 
-    return render(request, 'user/mypage.html',{"like": td,"post":posts,"username":username})
+    return render(request, 'user/mypage.html',{"like": td,"post":posts,"username":username,"image":userprofile})
