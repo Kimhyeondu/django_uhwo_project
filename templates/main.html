@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}main{% endblock %}
+
+{% block head %}
+    <link rel='stylesheet' href="{% static 'css/main.css' %}" media='screen'>
+{% endblock %}
+
+
+{% block main %}
+    <div class="row_flex">
+        <div class="frofile_contain">
+            <div id="frofile">
+                <img id="frofile_img" src=../media/{{image}}>
+            </div>
+            <div id="id_contain">
+                {{ username.user}}
+            </div>
+            <div id="edit_profile">
+                <a  id ="href" href="/mypage">
+                    Mypage
+                </a>
+
+            </div>
+            <div id = space>
+
+            </div>
+
+        </div>
+        <div class="post_contain">
+            <div id="flex_box">
+
+                <button id="uplood">개시물 작성하기</button>
+
+            </div>
+                <div id="rasipi_container">
+        {% for pt in post %}
+            <li class="rasipi_li_list">
+                <div class="rasipi_img_box">
+                    <a class="rasipi_img" href="/detail/{{ pt.id }}">
+{#                        {% if pt.id == pt.post_id %}#}
+                        <img class="rasipi-imgs" src=../media/{{pt.main_image}}>
+{#                        {% endif %}#}
+                    </a>
+                </div>
+                <div class=rasipi_comant_box">
+                    <div class="rasipi_commant">
+                        {{ pt.title }}
+                    </div>
+                    <div class="name_box">
+                        <img class="name_img" src=../media/{{ pt.author.fro_image }}>
+                        <p class ="name_img_text">{{ pt.author.username }}</p>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+                <li class="rasipi_li_list">
+                </li>
+                <li class="rasipi_li_list">
+                </li>
+                <li class="rasipi_li_list">
+                </li>
+                <li class="rasipi_li_list">
+                </li>
+                <li class="rasipi_li_list">
+                </li>
+                <li class="rasipi_li_list">
+                </li>
+                <li class="rasipi_li_list">
+                </li>
+                <li class="rasipi_li_list">
+                </li>
+
+    </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}

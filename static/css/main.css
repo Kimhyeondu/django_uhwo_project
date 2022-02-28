@@ -1,0 +1,334 @@
+.row_flex{
+    background-image: url('/static/img/img_1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+}
+.frofile_contain{
+     background-color: rgba( 255, 255, 255, 0.5 );
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    /*background-color: white;*/
+    margin: 10px 30px 10px 30px;
+    min-width: 300px;
+    min-height: 2000px;
+    text-align: center;
+
+}
+ a:link { color: blanchedalmond; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color: blue; text-decoration: underline;}
+#frofile{
+    margin: 30px auto 20px auto;
+    height: 300px;
+    width: 250px;
+    position: relative;
+
+    border-radius: 50%;
+    background-color: lightskyblue;
+
+
+}
+#frofile_img{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    border-radius: 50%;
+}
+
+#id_contain{
+    background-color: lightskyblue;
+    width: 250px;
+    height: 50px;
+     margin: auto;
+    line-height: 50px;
+    text-align: center;
+}
+.post_contain{
+    margin: 10px 30px 10px 30px;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    padding-bottom: 100px;
+    width: 100%;
+    height: 100%;
+
+
+}
+#edit_profile{
+     width: 250px;
+    height: 50px;
+     margin: 10px auto 30px auto;
+    text-align: center;
+    background-color: lightskyblue;
+    line-height: 50px;
+
+
+}
+#space{
+    height: 100%;
+}
+
+#flex_box{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+     background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+
+/*레시피 자동추가 css*/
+
+
+/*레시피 li 스타일------------------------------------------------------------------------*/
+
+#rasipi_container {
+     background-color: rgba( 255, 255, 255, 0.5 );
+    text-align: center;
+    margin: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    list-style-type: circle;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    line-height: 1.42857143;
+
+}
+
+#rasipi_container > p {
+    color: red;
+}
+
+.rasipi_li_list {
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0 12px 40px 0;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    box-sizing: border-box;
+    text-align: -webkit-match-parent;
+}
+
+.rasipi_img_box {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: block;
+    list-style: none;
+    text-align: -webkit-match-parent;
+}
+
+.rasipi_img {
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.rasipi-imgs {
+    max-width: 100%;
+    height: 200px;
+    vertical-align: middle;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    list-style: none;
+}
+
+.rasipi_commant_box {
+    padding: 10px 2px;
+    box-sizing: border-box;
+    display: block;
+    list-style: none;
+
+
+}
+
+.rasipi_commant {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.5;
+    margin: 0 0 6px 0;
+    color: #000;
+    text-align: left;
+    font-size: 15px;
+    box-sizing: border-box;
+    height: 50px;
+
+}
+
+.name_box {
+    color: #999;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    vertical-align: 0;
+    padding: 0 1px 7px 0;
+    font-weight: 300;
+    display: flex;
+
+}
+
+.name_img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin: 0 4px -2px 0;
+    vertical-align: text-bottom;
+    box-sizing: border-box;
+
+}
+.name_img_text{
+    color:black;
+}
+
+.rasipi_poot_box {
+    vertical-align: super;
+    line-height: 1;
+    margin: 0 0 9px 0;
+    box-sizing: border-box;
+    display: block;
+
+}
+
+.heart_box {
+    vertical-align: 1px;
+    box-sizing: border-box;
+
+}
+
+.heart_count {
+    vertical-align: middle;
+    color: #999;
+    font-size: 13px;
+    margin-left: 2px;
+    font-weight: 300;
+    box-sizing: border-box;
+
+}
+
+#rasipi_container {
+     background-color: rgba( 255, 255, 255, 0.5 );
+    text-align: center;
+    margin: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    list-style-type: circle;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    line-height: 1.42857143;
+
+}
+
+#rasipi_container > p {
+    color: red;
+}
+
+#recommend {
+    color: red;
+}
+
+/*.cate_list {*/
+/*    font-family: 'Noto Sans KR', sans-serif;*/
+/*    -webkit-text-size-adjust: 100%;*/
+/*    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
+/*    border-spacing: 0;*/
+/*    border-collapse: collapse;*/
+/*    box-sizing: border-box;*/
+/*    background-color: transparent;*/
+/*    text-decoration: none;*/
+/*    padding: 3px 8px 4px;*/
+/*    color: #666;*/
+/*    vertical-align: middle;*/
+/*    font-size: 15px;*/
+/*    line-height: 1;*/
+/*    font-weight: 300;*/
+/*}*/
+.cate_list {
+    font-family: 'Noto Sans KR', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #666;
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 8px 0;
+    line-height: 1;
+    height: 41px;
+    margin-left: 40px;
+
+}
+
+.cate_list>.active {
+    font-family: 'Noto Sans KR', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 3px 8px 4px;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 300;
+    color: #fff;
+    background: rosybrown;
+    margin: 0;
+    border-radius: 16px;
+}
+
+.cate_list > a {
+    font-family: 'Noto Sans KR', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 3px 8px 4px;
+    color: #666;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 300;
+}
+
+
+
+#my-rasipi-container{
+    display: flex;
+    text-align: center;
+    margin: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    list-style-type: circle;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    line-height: 1.42857143;
+     overflow: auto;
+
+}
+/*                                 여기까지*/
+
