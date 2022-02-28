@@ -4,10 +4,38 @@
 
 {% block head %}
 
- <link rel='stylesheet' href="{% static 'css/edit_profile.css' %}" media='screen'>
+    <link rel='stylesheet' href="{% static 'css/edit_profile.css' %}" media='screen'>
 
 {% endblock %}
 
 {% block main %}
+    <div id ="wraper">
+        <div id="edit_box">
+            <form method="POST" action="/edit_user/" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div id="edit_box_box">
+                    <div class="flex">
+                        <p> 변경할 아이디</p>
+                        <input type="text" placeholder="ID" name="title">
+                    </div>
+                    <div class="flex">
+                        <p> 변경할 사진</p>
+                        <input type="file" onchange="readURL(this);" name="imgs" multiple>
+                    </div>
+                    <div class="flex">
+                        <p> 사진 미리보기</p>
+                        <img id="blah" src=../media/{{ image }} >
+                    </div>
+                    {#                            {% if error %}#}
+                    {#                                <div class="alert alert-danger" role="alert">#}
+                    {#                                    {{ error }}#}
+                    {#                                </div>#}
+                    {#                            {% endif %}#}
+                    <input type="submit" value="작성하기">
+                </div>
+            </form>
+
+        </div>
+    </div>
     <script src="{% static 'js/edit_profile.js' %}"></script>
 {% endblock %}

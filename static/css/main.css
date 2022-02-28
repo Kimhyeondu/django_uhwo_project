@@ -77,8 +77,14 @@
     margin-top: 50px;
     width: 100%;
     display: flex;
-    justify-content: right;
+    text-align: center;
+    justify-content: space-between;
      background-color: rgba( 255, 255, 255, 0.5 );
+}
+#flex_box>p{
+    font-size: x-large;
+    margin-top: 5%;
+    margin-left: 12.3%;
 }
 
 
@@ -332,3 +338,8 @@
 }
 /*                                 여기까지*/
 
+
+#uplood{
+    margin: 3vw 10% 3vw 3vw;
+
+}

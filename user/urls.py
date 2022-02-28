@@ -9,4 +9,5 @@ urlpatterns = [
     # path('tweet/comment/delete/<int:id>', views.delete_comment, name='delete-comment'),
     # path('tweet/comment/like/<int:id>',views.comment_like,name='comment_like'),
     path('mypage/', views.mypage, name='mypage'),
+    path('edit_user/', views.edit_user, name='mypage'),
 ]
