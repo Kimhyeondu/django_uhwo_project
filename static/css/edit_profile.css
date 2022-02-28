@@ -1,0 +1,42 @@
+#edit_box{
+    margin: auto;
+    justify-items: center;
+    text-align: center;
+    width: 60%;
+    height: 90vh;
+    background: white;
+}
+#wraper{
+    background: mediumaquamarine;
+
+}
+
+#edit_box_box{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10% 20% 10% 20%;
+}
+.flex{
+    display: flex;
+    text-align: left;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 3%;
+
+}
+.flex>p{
+    padding-top: 5%;
+    line-height: 100%;
+    padding-right: 70px;
+    width: 40%;
+}
+.flex>img{
+    width:  15vw;
+    height: 15vw;
+    border-radius: 50%;
+
+}
