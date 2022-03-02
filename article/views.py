@@ -54,9 +54,8 @@ def upload(request):
 
 def detail_view(request, id):
     my_tweet = post.objects.get(id=id)
-    user=request.user.username
-
-
+    like = post.objects.filter(like=request.user)
+    user=request.user
     return render(request, 'article/detail.html',{"tweet": my_tweet,"user":user})
     # , '
 #
@@ -83,16 +82,14 @@ def detail_view(request, id):
 #     tweet_comment.delete()
 #     return redirect(f'/detail/{current_tweet}')
 #
-# def comment_like(request,id):
-#     me =request.user
-#     click_rasi = tweetmodel.objects.get(id=id)
-#
-#     if me in click_rasi.like.all():
-#         click_rasi.like.remove(request.user)
-#     else:
-#         click_rasi.like.add(request.user)
-#     return redirect(f'/detail/{id}')
-#
+def comment_like(request,id):
+    me =request.user
+    click_rasi = post.objects.get(id=id)
+    if me in click_rasi.like.all():
+        click_rasi.like.remove(request.user)
+    else:
+        click_rasi.like.add(request.user)
+    return redirect(f'/detail/{id}')
 #
 #
 #

@@ -14,18 +14,10 @@ def mypage(request):
     posts = post.objects.filter(author_id=request.user)
 
     td = []
-    for a in like:
-        # like_count = tweetmodel.objects.filter(like=a.id)
 
-        td += {a}
-        # ff=[]
-        # ff+={like_count}
-        print("----------")
-        # print(ff)
-        print(td)
     userprofile = UserModel.objects.get(username=request.user).fro_image
 
-    return render(request, 'user/mypage.html', {"like": td, "post": posts, "username": username, "image": userprofile})
+    return render(request, 'user/mypage.html', {"like": like, "post": posts, "username": username, "image": userprofile})
 
 
 # Create your views here.
