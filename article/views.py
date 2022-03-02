@@ -30,6 +30,35 @@ def main(request):
     return render(request, 'main.html',{"post":pos,"username":username,"image":userprofile})
 
 
+def upload(request):
+    username = request
+    if request.method == 'GET':
+        return render(request, 'article/upload.html',{"username":username})
+
+    if request.method == 'POST':
+        writes = post.objects.create(
+            author=request.user,
+            main_image=request.FILES['imgs'],
+            img_des=request.POST['des']
+        )
+        return redirect('/', writes.pk)
+    else:
+        return redirect(request, "article/upload.html")
+
+
+
+# def new(request):
+#     if request.method =='POST':
+#         writes = Write.objects.create(
+#             author=request.user,
+#             main_image=request.FILES['imgs'],
+#             img_des=request.POST['des']
+#         )
+#         return redirect('/', writes.pk)
+#     else:
+#         return render(request, "article/upload.html")
+
+
 # def detail_view(request, id):
 #     my_tweet = post.objects.get(id=id)
 #     all_comment = tweetcommant.objects.filter(tweet_id=id)

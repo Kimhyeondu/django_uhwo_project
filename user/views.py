@@ -40,8 +40,8 @@ def signup(request):
         password2 = request.POST.get('password2', '')
         fro_image = request.POST.get('fro_image', '') #한번 post씀. 끝.
 
-        found_user = UserModel.objects.filter(username=request.POST['username'])
-        exist_email = UserModel.objects.filter(email=request.POST['email'])
+        found_user = UserModel.objects.filter(username=username)
+        exist_email = UserModel.objects.filter(email=email)
 
         if len(found_user) > 0:
             return render(request, 'user/signup.html', {'error': '아이디가 이미 존재합니다.'})
