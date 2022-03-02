@@ -105,6 +105,7 @@
     margin-inline-end: 0px;
     padding-inline-start: 40px;
     line-height: 1.42857143;
+    min-height: 2000px;
 
 }
 
@@ -338,7 +339,9 @@
 }
 /*                                 여기까지*/
 
-
+ a:link { color: blanchedalmond; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color: blue; text-decoration: underline;}
 #uplood{
     margin: 3vw 10% 3vw 3vw;
 

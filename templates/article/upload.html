@@ -33,7 +33,10 @@
                 <img id='blank' src="/static/img/noimage.png">
                 <img class='card-select' id="card-cadin-select1"  src="" alt="..." >
             </div>
+            <div style="display: flex; flex-flow: column;">
+            <input type=text height="100px"  class="form-control" placeholder="유화제목" name = 'title'>
             <textarea type=text height="100px" id="description" class="form-control" placeholder="유화설명" name = 'des'></textarea>
+            </div>
             <div id = hidden_area>
 {# js에서 아래와 같이 작성되어 있고, 필터 실행시키면 추가되는 형식임. name='url_api' 기억할것               #}
 {#<textarea type=text id="api" class="form-control" placeholder="" name = 'url_api'>${urls}</textarea>#}

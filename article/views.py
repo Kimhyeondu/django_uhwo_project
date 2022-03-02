@@ -11,24 +11,14 @@ from django.views import View
 @login_required(login_url='signin')
 def main(request):
     username=request
-    # user = request.user.is_authenticated
-    # like_list=post.objects.filter(like=request.user).last()
-    # if user:
-    #     all_tweet = post.objects.all()
-    #
-    #
-    #     return render(request, 'main.html', {"tweet": all_tweet})
-    # else:
-    #     return redirect("/sign-in")
     user = request.user.is_authenticated
-    userprofile= UserModel.objects.get(username=request.user).fro_image
-    print(userprofile)
-
-
-
-    pos=post.objects.all()
-    return render(request, 'main.html',{"post":pos,"username":username,"image":userprofile})
-
+    # like_list=post.objects.filter(like=request.user).last()
+    userprofile = UserModel.objects.get(username=request.user).fro_image
+    if user:
+        pos = post.objects.all()
+        return render(request, 'main.html', {"post": pos, "username": username, "image": userprofile})
+    else:
+        return redirect("/sign-in")
 
 def upload(request):
     username = request
@@ -38,8 +28,11 @@ def upload(request):
     if request.method == 'POST':
         writes = post.objects.create(
             author=request.user,
-            main_image=request.FILES['imgs'],
-            img_des=request.POST['des']
+            main_image=request.POST['url_api'],
+            img_des=request.POST['des'],
+            title=request.POST['title'],
+
+
         )
         return redirect('/', writes.pk)
     else:
