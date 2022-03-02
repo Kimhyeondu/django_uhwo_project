@@ -1,45 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}index{% endblock %}
+{% block title %}Intro{% endblock %}
 
 {% block head %}
 
-    <link rel='stylesheet' href="{% static 'css/detail.css' %}" media='screen'>
+ <link rel='stylesheet' href="{% static 'css/detail.css' %}" media='screen'>
 
 {% endblock %}
 
 {% block main %}
-<div id="box">
-    <div id="container">
-        <div id="left_box">
-            <img src="/static/img/testmouse.jpg" class="image" alt="Logo Image">
-            <div class="like_time">
-                <p>* 좋아요 개수</p>
-                <p>{{ article.created_at }}</p>
-            </div>
-            <div class="edit">
-               {% if user == article.author %}
-                    <a href="{% url 'edit' article.pk %}"> 글 수정하기</a>
-                    <a href="{% url 'delete' article.pk %}">글 삭제하기</a>
-                {% endif %}
-                <a style="text-decoration:none" href="{% url 'index' %}">홈으로 돌아가기</a>
-            </div>
-        </div>
-
-        <div id="right_box">
-            <div class="title">
-                <h3>제목 : {{ article.title }}</h3>
-            </div>
-            <br>
-            <div class="explanation">
-                {{ article.content }}
-            </div>
-            <div class="writer">
-                <p>만든이 : {{ article.author }}</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
+    <script src="{% static 'js/detail.js' %}"></script>
 {% endblock %}

@@ -1,51 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Login{% endblock %}
+{% block title %}Intro{% endblock %}
 
 {% block head %}
 
-    <link rel='stylesheet' href="{% static 'css/signin.css' %}" media='screen'>
+ <link rel='stylesheet' href="{% static 'css/signin.css' %}" media='screen'>
 
 {% endblock %}
 
 {% block main %}
-    <form method="POST">
-        {% csrf_token %}
-        <div class="wrap">
-            <div class="mytitle">
-                <h1><strong>로그인</strong></h1>
-                <p>or <a href="{% url 'signup' %}">create an account</a></p>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="username" placeholder="url">
-                <label for="floatingInput">닉네임</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control" name="password" placeholder="url">
-                <label for="floatingInput">Password</label>
-            </div>
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-            </br>
-            </br>
-            {% if success %}
-                <div class="alert alert-primary" role="alert">
-                    {{ success }}
-                </div>
-            {% endif %}
-
-            {% if error %}
-                <div class="alert alert-danger" role="alert">
-                    {{ error }}
-                </div>
-            {% endif %}
-            <div class="d-grid gap-3">
-                <button class="btn btn-primary" type="submit">로그인</button>
-            </div>
-            </br>
-            <p><a href="   ">비밀번호를 잊으셨나요?</a></p>
-
-        </div>
-    </form>
+    <script src="{% static 'js/signin.js' %}"></script>
 {% endblock %}

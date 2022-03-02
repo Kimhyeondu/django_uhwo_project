@@ -1,66 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Login{% endblock %}
+{% block title %}Intro{% endblock %}
 
 {% block head %}
 
-    <link rel='stylesheet' href="{% static 'css/signup.css' %}" media='screen'>
+ <link rel='stylesheet' href="{% static 'css/signup.css' %}" media='screen'>
 
 {% endblock %}
 
 {% block main %}
-
-    <form method="post">
-        {% csrf_token %}
-        <div class="container">
-            <div class="mytitle">
-                <h1><strong>회원가입</strong></h1>
-                <p>or <a href="{% url 'signin' %}">sign in</a></p>
-            </div>
-
-            <div id="info_wrap">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" name="username" placeholder="url">
-                    <label for="floatingInput">닉네임</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="url">
-                    <label for="floatingInput">Email@xxxxx.com</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" name="password" placeholder="url">
-                    <label for="floatingInput">Password</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" name="password2" placeholder="url">
-                    <label for="floatingInput">비밀번호를 다시 입력해주세요</label>
-                </div>
-
-                <div class="mb-3">
-                    <label for="formFile" class="form-label">프로필 사진을 선택해주세요</label>
-                    <input class="form-control" type="file" id="formFile" name="fro_image">
-                </div>
-
-            </div>
-
-
-            {% if error %}
-                <div class="alert alert-danger" role="alert">
-                    {{ error }}
-                </div>
-            {% endif %}
-
-            {% if success %}
-                <div class="alert alert-primary" role="alert">
-                    {{ success }}
-                </div>
-            {% endif %}
-
-            <div id="done">
-                <div class="d-grid gap-3">
-                    <button class="btn btn-primary" type="submit">회원가입 완료!</button>
-                </div>
-            </div>
-        </div>
-    </form>
+    <script src="{% static 'js/signup.js' %}"></script>
 {% endblock %}

@@ -1,4 +1,3 @@
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from user.models import UserModel
@@ -6,10 +5,7 @@ from .models import post, postcommant, photo
 from django.http import JsonResponse
 from django.views import View
 
-
-@login_required(login_url='signin')
 def main(request):
-
     username=request
     # user = request.user.is_authenticated
     # like_list=post.objects.filter(like=request.user).last()
