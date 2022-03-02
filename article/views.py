@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from user.models import UserModel
@@ -5,6 +6,9 @@ from .models import post, postcommant, photo
 from django.http import JsonResponse
 from django.views import View
 
+
+# 로그인 안한사람이 이 요청을 수행하면 작동 안함, signin페이지나 봐라
+@login_required(login_url='signin')
 def main(request):
     username=request
     # user = request.user.is_authenticated
