@@ -4,10 +4,99 @@
 
 {% block head %}
 
- <link rel='stylesheet' href="{% static 'css/upload.css' %}" media='screen'>
+ <link rel='stylesheet' href="{% static 'css/upload.css' %}">
 
 {% endblock %}
 
 {% block main %}
+<div class="row_flex">
+
+    <div class="content-upload">
+        <form method ="POST" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <div id=wrapper-button>
+            <h5>Step1.사진선택&설명</h5>
+            <input id="uploaded_file" type="file" onchange="readURL(this);close_box2();" name="imgs" multiple>
+{#            <input id="uploaded_file" type="file">#}
+            <h5>Step3.업로드 버튼 클릭</h5>
+            <button type="submit">업로드하기!</button>
+        </div>
+        <div id="wrapper-image">
+            <div id=choose-image>
+
+                <p>원본이미지</p>
+                <img id='blank2' src="/static/img/noimage.png">
+                <img id="blah2" src="" >
+            </div>
+            <div id="upload-image">
+                 <p>필터이미지</p>
+                <img id='blank' src="/static/img/noimage.png">
+                <img class='card-select' id="card-cadin-select1"  src="" alt="..." input type="file" >
+            </div>
+
+            <textarea type=text height="100px" id="description" class="form-control" placeholder="유화설명" name = 'des'></textarea>
+
+        </div>
+        <div id="bottom-image">
+            <h5>Step2. 유화필터 선택!</h5>
+        </div>
+
+        <div id=container-filter>
+            <div id=filter-wrapper>
+                <div class="filter-stlye">
+                    <div class="card">
+                        <img id="card-cadin"  src="/static/img/cadin.png" alt="..." onclick="close_box(); kandinsky();">
+
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h5 class="card-text">필터1</h5>
+                                칸딘스키
+                            </div>
+                        </div>
+                        <button onclick="kandinsky();" type = button>선택</button>
+                    </div>
+                </div>
+                <div class="filter-stlye">
+                    <div class="card">
+                        <img class="card-img" src="/static/img/mosa.png" alt="...">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h5 class="card-text">필터2</h5>
+                                모자이크
+                            </div>
+                        </div>
+                        <button onclick="close_box()" type = button>선택</button>
+                    </div>
+                </div>
+                <div class="filter-stlye">
+                    <div class="card">
+                        <img class="card-img" src="/static/img/pica.png" alt="...">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h5 class="card-text">필터3</h5>
+                                피카소
+                            </div>
+                        </div>
+                        <button onclick="close_box();kandinsky()" type = button>선택</button>
+                    </div>
+                </div>
+                <div class="filter-stlye">
+                    <div class="card">
+                        <img class="card-img" src="/static/img/mone.png" alt="...">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h5 class="card-text">필터4</h5>
+                                모네
+                            </div>
+                        </div>
+                        <button onclick="close_box()" type = button>선택</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
     <script src="{% static 'js/upload.js' %}"></script>
 {% endblock %}
