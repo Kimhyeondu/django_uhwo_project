@@ -12,7 +12,7 @@ class post(models.Model):
     title = models.CharField(max_length=200)
     img_des = models.CharField(max_length=200)
     like: ManyToManyField = models.ManyToManyField(UserModel, related_name='followee', blank=True)
-    main_image = models.ImageField(upload_to='images/', blank=True, null=True)
+    main_image = models.CharField(max_length=200)
 
 
 

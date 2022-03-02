@@ -38,7 +38,7 @@ def signup(request):
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
         password2 = request.POST.get('password2', '')
-        fro_image = request.POST.get('fro_image', '') #한번 post씀. 끝.
+        fro_image = request.FILES['fro_image'] #한번 post씀. 끝
 
         found_user = UserModel.objects.filter(username=username)
         exist_email = UserModel.objects.filter(email=email)
