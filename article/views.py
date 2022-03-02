@@ -54,9 +54,9 @@ def upload(request):
 
 def detail_view(request, id):
     my_tweet = post.objects.get(id=id)
-    like = post.objects.filter(like=request.user)
+    like = post.objects.filter(like=request.user).count()
     user=request.user
-    return render(request, 'article/detail.html',{"tweet": my_tweet,"user":user})
+    return render(request, 'article/detail.html',{"tweet": my_tweet,"user":user,"l_c":like})
     # , '
 #
 # # @login_required  # 로그인이 되어있어야 실행가능
