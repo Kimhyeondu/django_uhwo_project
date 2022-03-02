@@ -38,7 +38,7 @@ def signup(request):
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
         password2 = request.POST.get('password2', '')
-        fro_image = request.POST.get('fro_image', '')
+        fro_image = request.POST.get('fro_image', '') #한번 post씀. 끝.
 
         found_user = UserModel.objects.filter(username=username)
         exist_email = UserModel.objects.filter(email=email)
@@ -61,7 +61,9 @@ def signup(request):
 
             else:
                 UserModel.objects.create_user(email=email, username=username, password=password, fro_image=fro_image)
-                return render(request, 'user/signin.html', {'success': '회원가입 완료 !'})
+                # return render(request, 'user/signup.html', {'success': '회원가입 완료 !'})
+                # return render(request, 'user/signin.html', {'success': '회원가입 완료 !'}) <- 하고싶은데 안됨
+                return redirect('signin')
 
     else:
         # 그냥 링크타고 들어왔을 때
