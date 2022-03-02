@@ -17,6 +17,7 @@ class post(models.Model):
 
 
 
+
 class postcommant(models.Model):
     class Meta:
         db_table = "comment"

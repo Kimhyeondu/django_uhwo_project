@@ -30,14 +30,14 @@
 <nav id="navbar">
     <div class="nav-wrapper">
         <div class="logo">
-            <a href=""><img src="/static/img/logoo.png"></a>
+            <a href="/"><img src="/static/img/logoo.png"></a>
         </div>
         {% if user.is_authenticated %}  {# 로그인 한사람이라면 #}
             <ul id="menu">
-                <li><a href="">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">About</a></li>
-                <li><a href="">Mypage</a></li>
+                <li><a href="/mypage">Mypage</a></li>
             </ul>
 
             <ul id="logout">
