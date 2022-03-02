@@ -140,3 +140,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ============== UserAPP 필요한 코드 ============== #
 AUTH_USER_MODEL = 'user.UserModel'
+
+# 자동로그아웃 시간 설정
+# Django Session Timeout Code
+SESSION_COOKIE_AGE = 1200
+SESSION_SAVE_EVERY_REQUEST = True
