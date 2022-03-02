@@ -61,7 +61,7 @@ def signup(request):
 
             else:
                 UserModel.objects.create_user(email=email, username=username, password=password, fro_image=fro_image)
-                return render(request, 'user/signin.html', {'success': '회원가입 완료 !'})
+                return render(request, 'user/signup.html', {'success': '회원가입 완료 !'})
 
     else:
         # 그냥 링크타고 들어왔을 때
