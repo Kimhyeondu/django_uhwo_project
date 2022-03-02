@@ -12,30 +12,30 @@
 <div id="box">
     <div id="container">
         <div id="left_box">
-            <img src="/static/img/testmouse.jpg" class="image" alt="Logo Image">
+            <img src=../media/{{ tweet.main_image }} class="image" alt="Logo Image">
             <div class="like_time">
                 <p>* 좋아요 개수</p>
-                <p>{{ article.created_at }}</p>
+                <p></p>
             </div>
             <div class="edit">
                {% if user == article.author %}
-                    <a href="{% url 'edit' article.pk %}"> 글 수정하기</a>
-                    <a href="{% url 'delete' article.pk %}">글 삭제하기</a>
+                    <a href="{% url 'edit' tweet.id %}"> 글 수정하기</a>
+                    <a href="{% url 'delete' tweet.id %}">글 삭제하기</a>
                 {% endif %}
-                <a style="text-decoration:none" href="{% url 'index' %}">홈으로 돌아가기</a>
+                <a style="text-decoration:none" href='/' >홈으로 돌아가기</a>
             </div>
         </div>
 
         <div id="right_box">
             <div class="title">
-                <h3>제목 : {{ article.title }}</h3>
+                <h3>제목 : {{ tweet.title }}</h3>
             </div>
             <br>
             <div class="explanation">
-                {{ article.content }}
+                {{ tweet.img_des }}
             </div>
             <div class="writer">
-                <p>만든이 : {{ article.author }}</p>
+                <p>만든이 : {{ tweet.author.username }}</p>
             </div>
         </div>
     </div>

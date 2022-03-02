@@ -59,24 +59,13 @@ def upload(request):
 #         return render(request, "article/upload.html")
 
 
-# def detail_view(request, id):
-#     my_tweet = post.objects.get(id=id)
-#     all_comment = tweetcommant.objects.filter(tweet_id=id)
-#     user=request.user.username
-#     if request.method == "GET":
-#         taglist =""
-#         tags=my_tweet.tag
-#         list(tags)
-#         for i in range(0, 4):
-#             tag = tags.split(",")[i]
-#             print(tag)
-#             if tag != "전체":
-#                 taglist = taglist + " " + tag
-#                 print("-----")
-#                 print(taglist)
-#
-#         return render(request, 'detail.html',{"tweet": my_tweet,"tag":taglist,"comment": all_comment,"user":user})
-#     # , '
+def detail_view(request, id):
+    my_tweet = post.objects.get(id=id)
+    user=request.user.username
+
+
+    return render(request, 'article/detail.html',{"tweet": my_tweet,"user":user})
+    # , '
 #
 # # @login_required  # 로그인이 되어있어야 실행가능
 # def write_comment(request, id):
