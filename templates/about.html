@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}main{% endblock %}
+
+{% block head %}
+    <link rel='stylesheet' href="{% static 'css/about.css' %}" media='screen'>
+{% endblock %}
+
+
+{% block main %}
+
+    <!-- header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <p class="intro-text">welcome, [ YouHi ]
+                            <br> We are <span class="fa fa-code" aria-hidden="true"></span> <span class="intro-text-hgl">developers</span>
+                            <span class="fa fa-code" aria-hidden="true"></span>
+                            <br>Convert all your images <span class="city">images</span> into oil paintings.</p>
+                        <!-- start mouse wrap -->
+                        <div class="mouse-warp">
+                            <a href="#mouse-here" class="page-scroll">
+                                <div class="mouse">
+                                    <div class="scroll"></div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="mouse-here"></div>
+
+    <!-- start about -->
+    <section id="about-me">
+        <div class="container">
+            <div class="row">
+                <h2>ABOUT</h2>
+                <div class="col-lg-6 about-intro">
+                    <div class="about-inner">
+                        <div class="about-ct">
+                            <img src="https://mblogthumb-phinf.pstatic.net/20141227_130/studygir_1419677114576Xg5Kn_JPEG/bo99_%281%29.jpg?type=w2" alt="Marina Marques"
+                                 class="img-responsive">
+                            <div class="textbox-about hidden-xs">
+                                <div class="btn button-social">
+                                    <a href="https://codepen.io/shvvffle/" target="_blank" alt="CodePen profile"><span
+                                            class="fa fa-codepen" aria-hidden="true"></span></a>
+                                    <a href="https://pt.linkedin.com/in/marinamarques9" alt="LinkedIn profile"
+                                       target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                                    <a href="https://github.com/shvvffle" target="_blank" alt="GitHub profile"><span
+                                            class="fa fa-github" aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 about-intro-text">
+                    <p>이미지 변환 처리는 <span>Ai 머신러닝 기술</span>과 <span>여러분의 이미지</span>로 완성됩니다.<br>
+                        <br>
+                        [ YouHi ]는 유명 미술관에서 만날 수 있는 명화 느낌을 바로 내 생활에 적용하는 sns 웹 서비스입니다.<br>
+                        모든 이미지를 명화로 만들고, 우리의 일상을 명화로 기록하고, 자유롭게 공유해 보세요.<br>
+                        <br>
+                        [ YouHi ] 탄생,
+                        AI 웹개발 트랙 1기 이미지 변환 팀프로젝트.<br>
+                        곽주혁: 서비스 첫 인상을 좌우하는 회원가입, 로그인, 로그아웃, 모달로 상세 게시물 보기 구현.<br>
+                        김현두: 유저 모두를 이어주는 메인페이지, 마이페이지, 상단바, 프로필 변경, 좋아요 기능 구현.<br>
+                        신동석: 이미지 유화 변환 처리를 실시간으로 미리 보여주는 게시물 업로드 기능 구현.<br>
+                        구현정: TensorFlow Hub 모델로 이미지 변환 작업 진행하여 OPEN API 구축.<br>
+                        이제 당신의 유화로 일상을 공유하세요!
+                        <span class="fa fa-beer" aria-hidden="true"></span></p>
+                    </div>
+                </div>
+            </div>
+        <p> </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-area footer--light">
+        <div class="footer-big">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="footer-widget">
+                            <div class="widget-about">
+                                <img src="/static/img/logoo.png" class="img-fluid">
+                                <p>Information about the developer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                                <h4 class="footer-widget-title">Developers</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">developer 곽주혁</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">developer 구현정</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">developer 김현두</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">developer 신동석</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">developer 김진영</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu">
+                                <h4 class="footer-widget-title">GitHub</h4>
+                                <ul>
+                                    <li>
+                                        <a href="https://github.com/jh2277">https://github.com/jh2277</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/KooHyunJung">https://github.com/KooHyunJung</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/Kimhyeondu">https://github.com/Kimhyeondu</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/dsshin99999">https://github.com/dsshin99999</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/jinyoung26">https://github.com/jinyoung26</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu no-padding">
+                                <h4 class="footer-widget-title">About Project</h4>
+                                <ul>
+                                    <li>
+                                        <a href="mommyson1010@gmail.com">YouHi email</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.figma.com/file/cF7rVbJaA8jqS11Can1O31/10JO_UHWA_Project?node-id=0%3A1">Plan &amp; Term figma</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/Kimhyeondu/django_uhwo_project">Term GitHub</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/Kimhyeondu/django_uhwo_project">Project Stack</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mini-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright-text">
+                            <p>© 2022
+                                <a href="#">Republic of Korea</a>. All rights reserved. Created by
+                                <a href="#">YouHi</a>
+                            </p>
+                        </div>
+
+                        <div class="go_top">
+                            <span class="icon-arrow-up"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}

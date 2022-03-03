@@ -39,6 +39,11 @@ def upload(request):
         return redirect(request, "article/upload.html")
 
 
+@login_required(login_url='signin')
+def about(request):
+    if request.method == 'GET':
+        return render(request, 'about.html')
+
 
 # def new(request):
 #     if request.method =='POST':
